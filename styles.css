@@ -1,0 +1,87 @@
+
+@font-face{
+	font-family: Meta;
+	src: url("meta.ttf");
+}
+
+
+
+/*1. horizontally center without having to specify the width.
+(parent) text-align: center;
+(child) display: inline-block;
+*/
+
+.main-container{
+	text-align: center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: table;
+
+}
+
+.grid-container{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+div.row{
+	height: 52px;
+}
+
+span {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	border: rgba(0,0,0,0.2) solid 1px;
+	margin: 0px;
+}
+
+span.selected {
+	background: red;
+}
+
+span.selected.hidden {
+	background: transparent;
+}
+
+/*2. overlay on top of the matrix
+position: absolute
+top: 0
+(child) display: inline-block; for horizontally centered but
+*/ 
+.overlay-container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: table;
+}
+
+.overlay-container.hidden{
+	display: none;
+}
+
+.overlay{
+	background: rgba(0,0,0,0.5);
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+h3{
+	font-family: Meta;
+	font-size: 1.8rem;
+	color: white;
+}
+
+
+.message.hidden{
+	display: none;
+}
